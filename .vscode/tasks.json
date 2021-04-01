@@ -1,0 +1,48 @@
+{
+    "tasks": [
+        {
+            "type": "process",
+            "label": "Include",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-I",
+                "G:\\DevStudySources\\Allegro\\allegro-5.0.10-mingw-4.7.0\\include",
+                "-c",
+                "${file}",
+                "-g"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe arquivo de build ativo",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "cc.o",
+                "G:\\DevStudySources\\Allegro\\allegro-5.0.10-mingw-4.7.0\\lib\\liballegro-5.0.10-monolith-mt.a",
+                "-g"
+
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarefa gerada pelo Depurador.",
+            "dependsOn": "Include"
+        }
+    ],
+    "version": "2.0.0"
+}
